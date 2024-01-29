@@ -3,6 +3,7 @@
   "description": "Uniswap Interface",
   "homepage": ".",
   "private": true,
+  "packageManager": "yarn@1.22.21",
   "devDependencies": {
     "@emotion/core": "^11.0.0",
     "@popperjs/core": "^2.4.4",
