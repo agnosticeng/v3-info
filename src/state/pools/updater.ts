@@ -1,6 +1,6 @@
 import { useUpdatePoolData, useAllPoolData, useAddPoolKeys } from './hooks'
 import { useEffect, useMemo } from 'react'
-import { useTopPoolAddresses } from 'data/pools/topPools'
+import { useTopPoolAddresses } from 'agnostic/pools/query'
 import { usePoolDatas } from 'data/pools/poolData'
 import { POOL_HIDE } from '../../constants'
 import { useActiveNetworkVersion } from 'state/application/hooks'

@@ -1,7 +1,7 @@
 import { SupportedNetwork } from 'constants/networks'
 import { fetchPoolChartData } from 'data/pools/chartData'
 import { usePoolDatas } from 'data/pools/poolData'
-import { useTopPoolAddresses } from 'data/pools/topPools'
+import { useTopPoolAddresses } from 'agnostic/pools/query'
 import { useEffect, useMemo, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { AppDispatch } from 'state'
