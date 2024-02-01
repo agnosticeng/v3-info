@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client'
 import gql from 'graphql-tag'
 import { useDeltaTimestamps } from 'utils/queries'
-import { useBlocksFromTimestamps } from 'hooks/useBlocksFromTimestamps'
+import { useBlocksFromTimestamps } from 'agnostic/blocks/query'
 import { PoolData } from 'state/pools/reducer'
 import { get2DayChange } from 'utils/data'
 import { formatTokenName, formatTokenSymbol } from 'utils/tokens'

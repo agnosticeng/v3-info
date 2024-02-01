@@ -1,4 +1,4 @@
-import { useBlocksFromTimestamps } from 'hooks/useBlocksFromTimestamps'
+import { useBlocksFromTimestamps } from 'agnostic/blocks/query'
 import { useDeltaTimestamps } from 'utils/queries'
 import { useState, useEffect, useMemo } from 'react'
 import gql from 'graphql-tag'
