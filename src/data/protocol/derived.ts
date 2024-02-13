@@ -1,5 +1,5 @@
 import { SupportedNetwork } from 'constants/networks'
-import { fetchPoolChartData } from 'data/pools/chartData'
+import { fetchPoolChartData } from 'agnostic/pool_day_data/query'
 import { usePoolDatas } from 'data/pools/poolData'
 import { useTopPoolAddresses } from 'agnostic/pools/query'
 import { useEffect, useMemo, useState } from 'react'
