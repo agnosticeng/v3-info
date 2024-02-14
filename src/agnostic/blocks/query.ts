@@ -63,8 +63,8 @@ export function useBlocksFromTimestamps(
       }
     }
 
-    fetchData()
-  }, [timestamps])
+    if (!blocks && !error) fetchData()
+  }, [timestamps, blocks, error])
 
   return { blocks, error }
 }

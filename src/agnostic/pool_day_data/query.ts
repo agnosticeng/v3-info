@@ -39,8 +39,9 @@ export async function fetchPoolChartData(
   address: string,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   _client: ApolloClient<NormalizedCacheObject>,
-): Promise<{ data: PoolChartEntry[]; error: boolean }> {
-  const { data, error } = await client.query<QueryResults>({
+): Promise<{ data?: PoolChartEntry[]; error: boolean }> {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { data, error, loading } = await client.query<QueryResults>({
     query: POOL_CHART,
     variables: {
       address: address,
@@ -49,19 +50,20 @@ export async function fetchPoolChartData(
     fetchPolicy: 'cache-first',
   })
 
-  return {
-    data:
-      data.pool_day_data?.map((d) => {
-        const feePercent = parseFloat(d.pool_fee_tier) / 10000
-        const tvlAdjust = parseFloat(d.volume_usd) * feePercent
+  const formattedData = data.pool_day_data?.map((d) => {
+    const feePercent = parseFloat(d.pool_fee_tier) / 10000
+    const tvlAdjust = parseFloat(d.volume_usd) * feePercent
 
-        return {
-          date: dayjs(d.date).unix(),
-          volumeUSD: parseFloat(d.volume_usd),
-          totalValueLockedUSD: parseFloat(d.tvl_usd) - tvlAdjust,
-          feesUSD: parseFloat(d.fees_usd),
-        }
-      }) ?? [],
+    return {
+      date: dayjs(d.date).unix(),
+      volumeUSD: parseFloat(d.volume_usd),
+      totalValueLockedUSD: parseFloat(d.tvl_usd) - tvlAdjust,
+      feesUSD: parseFloat(d.fees_usd),
+    }
+  })
+
+  return {
+    data: formattedData,
     error: Boolean(error),
   }
 }
