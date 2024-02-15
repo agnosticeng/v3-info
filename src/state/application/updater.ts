@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useSubgraphStatus } from './hooks'
-import { useFetchedSubgraphStatus } from '../../data/application'
+import { useFetchedSubgraphStatus } from 'agnostic/blocks/sync_status'
 
 export default function Updater(): null {
   // subgraph status

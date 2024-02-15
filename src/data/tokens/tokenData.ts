@@ -5,7 +5,7 @@ import { useDeltaTimestamps } from 'utils/queries'
 import { useBlocksFromTimestamps } from 'agnostic/blocks/query'
 import { get2DayChange } from 'utils/data'
 import { TokenData } from 'state/tokens/reducer'
-import { useEthPrices } from 'hooks/useEthPrices'
+import { useEthPrices } from 'agnostic/eth_prices/query'
 import { formatTokenSymbol, formatTokenName } from 'utils/tokens'
 import { useActiveNetworkVersion, useClients } from 'state/application/hooks'
 
