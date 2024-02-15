@@ -45,7 +45,7 @@ export async function fetchPoolChartData(
     query: POOL_CHART,
     variables: {
       address: address,
-      startTime: dayjs.unix(startTimestamp).format('YYYY-MM-DD'),
+      startTime: dayjs.unix(startTimestamp).toISOString(),
     },
     fetchPolicy: 'cache-first',
   })
