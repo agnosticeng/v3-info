@@ -122,12 +122,17 @@ export default function NetworkDropdown() {
             </TYPE.main>
             {SUPPORTED_NETWORK_VERSIONS.map((n) => {
               return (
-                <StyledInternalLink key={n.id} to={`${n === EthereumNetworkInfo ? '' : '/' + n.route}/`}>
+                <StyledInternalLink
+                  key={n.id}
+                  disabled={n.disabled}
+                  to={`${n === EthereumNetworkInfo ? '' : '/' + n.route}/`}
+                >
                   <NetworkRow
                     onClick={() => {
                       setShowMenu(false)
                     }}
                     active={activeNetwork.id === n.id}
+                    disabled={n.disabled}
                   >
                     <RowFixed>
                       <LogaContainer>

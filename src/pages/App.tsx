@@ -87,7 +87,7 @@ export default function App() {
   // pretend load buffer
   const [loading, setLoading] = useState(true)
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1300)
+    setTimeout(() => setLoading(false), 1000)
   }, [])
 
   // update network based on route

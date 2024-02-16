@@ -28,6 +28,7 @@ export type NetworkInfo = {
   bgColor: string
   primaryColor: string
   secondaryColor: string
+  disabled?: boolean
 }
 
 export const EthereumNetworkInfo: NetworkInfo = {
@@ -50,6 +51,7 @@ export const ArbitrumNetworkInfo: NetworkInfo = {
   bgColor: '#0A294B',
   primaryColor: '#0490ED',
   secondaryColor: '#96BEDC',
+  disabled: true,
 }
 
 export const OptimismNetworkInfo: NetworkInfo = {
@@ -61,6 +63,7 @@ export const OptimismNetworkInfo: NetworkInfo = {
   primaryColor: '#F01B36',
   secondaryColor: '#FB7876',
   imageURL: OPTIMISM_LOGO_URL,
+  disabled: true,
 }
 
 export const PolygonNetworkInfo: NetworkInfo = {
@@ -72,6 +75,7 @@ export const PolygonNetworkInfo: NetworkInfo = {
   primaryColor: '#8247e5',
   secondaryColor: '#FB7876',
   imageURL: POLYGON_LOGO_URL,
+  disabled: true,
 }
 export const CeloNetworkInfo: NetworkInfo = {
   chainId: ChainId.CELO,
@@ -82,6 +86,7 @@ export const CeloNetworkInfo: NetworkInfo = {
   primaryColor: '#35D07F',
   secondaryColor: '#9ACDB2',
   imageURL: CELO_LOGO_URL,
+  disabled: true,
 }
 
 export const BNBNetworkInfo: NetworkInfo = {
@@ -93,6 +98,7 @@ export const BNBNetworkInfo: NetworkInfo = {
   primaryColor: '#F0B90B',
   secondaryColor: '#F0B90B',
   imageURL: BNB_LOGO_URL,
+  disabled: true,
 }
 
 export const BaseNetworkInfo: NetworkInfo = {
@@ -104,6 +110,7 @@ export const BaseNetworkInfo: NetworkInfo = {
   primaryColor: '#0052ff',
   secondaryColor: '#0052ff',
   imageURL: BASE_LOGO_URL,
+  disabled: true,
 }
 
 export const AvalancheNetworkInfo: NetworkInfo = {
@@ -115,6 +122,7 @@ export const AvalancheNetworkInfo: NetworkInfo = {
   primaryColor: '#e84142',
   secondaryColor: '#e84142',
   imageURL: AVALANCHE_LOGO_URL,
+  disabled: true,
 }
 
 export const SUPPORTED_NETWORK_VERSIONS: NetworkInfo[] = [
